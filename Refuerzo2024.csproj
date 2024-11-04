@@ -46,13 +46,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\Asignaturas\ControllerAsignaturas.cs" />
     <Compile Include="Controller\Dashboard\ControllerDashboard.cs" />
     <Compile Include="Controller\Estudiantes\ControllerEstudiante.cs" />
     <Compile Include="Model\Conexion\dbContext.cs" />
+    <Compile Include="Model\DAO\DAOAsignaturas.cs" />
     <Compile Include="Model\DAO\DAOEstudiantes.cs" />
+    <Compile Include="Model\DTO\DTOAsignaturas.cs" />
     <Compile Include="Model\DTO\DTOEstudiantes.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\Asignaturas\ViewAsignaturas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Asignaturas\ViewAsignaturas.Designer.cs">
+      <DependentUpon>ViewAsignaturas.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Dashboard\ViewDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,6 +84,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="View\Asignaturas\ViewAsignaturas.resx">
+      <DependentUpon>ViewAsignaturas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Dashboard\ViewDashboard.resx">
       <DependentUpon>ViewDashboard.cs</DependentUpon>
     </EmbeddedResource>
